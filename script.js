@@ -1,7 +1,13 @@
+//score variables:
+let humanScore = 0;
+let computerScore = 0;
+
 //user player function
 let userChoice = () => prompt("ingresa tu opcion: ");
 
 //random computer choice function:
+
+
 
 function getComputerChoice(){
   let randomNum = Math.floor(Math.random()*3);
@@ -22,6 +28,14 @@ function getComputerChoice(){
 
 }
 
-console.log("humano: " + userChoice());
-console.log("ordenador: " + getComputerChoice());
+function play(computerChoice,humanChoice){
+  humanChoice = userChoice().toLowerCase();
+  computerChoice = getComputerChoice().toLowerCase();
+  console.log("human says: " + humanChoice);
+  console.log("computer says: " + computerChoice);
+  console.log("computer: " + computerScore);
+  console.log("human: " + humanScore);
+}
+
+play()
 
